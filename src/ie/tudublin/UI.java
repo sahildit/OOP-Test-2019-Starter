@@ -8,6 +8,8 @@ import javax.swing.table.TableColumn;
 
 //import com.sun.rowset.internal.Row;
 
+//import com.sun.rowset.internal.Row;
+
 import processing.core.PApplet;
 import processing.data.Table;
 import processing.data.TableRow;
@@ -43,7 +45,7 @@ public class UI extends PApplet
 
 	public void loadColours()
 	{
-		Table table = loadTable("cafe.csv", "header");
+		Table table = loadTable("colours", "header");
         for(TableRow row : table.rows())
         {
             Colour c = new Colour(row);
@@ -52,7 +54,22 @@ public class UI extends PApplet
 
 	}
 	
+
+	public void printColours()
+	{
+		for(int i = 0; i < colours.size(); i++)
+		{
+            System.out.println(colours.get(i));
+		}
+	}
+	
+	public Colour findColor(int value)
+	{
+		return null;
+		
+	}
 	public void draw()
-	{			
+	{		
+		printColours();	
 	}
 }
