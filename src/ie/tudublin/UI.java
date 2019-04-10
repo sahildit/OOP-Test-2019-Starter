@@ -93,10 +93,20 @@ public class UI extends PApplet
 		float rectW = 90;
 		float rectH = 90;
 
+		noFill();
 		rect(x,y,rectW,rectH);
-		rect(x,map(y,0,130,130,0),rectW,rectH);
-		//rect(x,y,rectW,rectH);
-		//rect(x,y,rectW,rectH);
+		line(x-rectW,y + rectH/2, x, y + rectH/2);
+		line(x + rectW, y + rectH/2, x + rectW*2, y+rectH/2);
+
+
+		rect(x,map(y,0,130,130,290),rectW,rectH);
+		line(x,y,rectW,rectH);
+
+		rect(x,map(y,0,170,290,450),rectW,rectH);
+		line(x,y,rectW,rectH);
+
+		rect(x,y,rectW,rectH);
+		line(x,y,rectW,rectH);
 
 
 
