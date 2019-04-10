@@ -4,13 +4,20 @@ package ie.tudublin;
 
 import java.util.ArrayList;
 
+import javax.swing.table.TableColumn;
+
+//import com.sun.rowset.internal.Row;
+
 import processing.core.PApplet;
 import processing.data.Table;
 import processing.data.TableRow;
 
 public class UI extends PApplet
 
-{	public void separate(int value)
+{
+	private ArrayList<Colour> colours = new ArrayList<Colour>();
+
+	public void separate(int value)
 	{
 		int hundreds = (value / 100);
 		int tens = (value - (hundreds * 100)) / 10;
@@ -31,6 +38,18 @@ public class UI extends PApplet
 
 	public void setup() 
 	{
+		loadColours();
+	}
+
+	public void loadColours()
+	{
+		Table table = loadTable("cafe.csv", "header");
+        for(TableRow row : table.rows())
+        {
+            Colour c = new Colour(row);
+            colours.add(c);
+        }
+
 	}
 	
 	public void draw()

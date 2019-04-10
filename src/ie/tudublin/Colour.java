@@ -18,10 +18,10 @@ public class Colour
         this.colour = colour;
     }
 
-    // public Colour(TableColumn column)
-    // {
-    //     this((column.getFloat("r"),column.getFloat("g"),column.getFloat("b"),column.getString(colour)); 
-    // }
+     public Colour(TableRow tr)
+        {
+        this(tr.getFloat("r"),tr.getFloat("g"),tr.getFloat("b"),tr.getString("colour")); 
+        }
 
     /**
      * @return the r
