@@ -81,8 +81,24 @@ public class UI extends PApplet
 		return null;
 		
 	}
+
+
+
 	public void draw()
 	{		
 		printColours();	
+
+		float x = 90;
+		float y = 40;
+		float rectW = 90;
+		float rectH = 90;
+
+		rect(x,y,rectW,rectH);
+		rect(x,map(y,0,130,130,0),rectW,rectH);
+		//rect(x,y,rectW,rectH);
+		//rect(x,y,rectW,rectH);
+
+
+
 	}
 }
